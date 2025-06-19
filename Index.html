@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandelbrot Set Visualizer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Mandelbrot Set Visualizer</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <canvas id="mandelbrotCanvas" width="800" height="600"></canvas>
+            </div>
+            <div class="col-md-4">
+                <div class="controls card p-3">
+                    <h3>Controls</h3>
+                    <div class="form-group">
+                        <label for="iterations">Iterations:</label>
+                        <input type="range" class="custom-range" id="iterations" min="1" max="1000" value="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="zoom">Zoom:</label>
+                        <input type="range" class="custom-range" id="zoom" min="1" max="10" step="0.1" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="colorScheme">Color Scheme:</label>
+                        <select class="form-control" id="colorScheme">
+                            <option value="monochrome">Monochrome</option>
+                            <option value="rainbow">Rainbow</option>
+                            <option value="cool">Cool</option>
+                            <option value="fire">Fire</option>
+                            <option value="ocean">Ocean</option>
+                            <option value="hsv">HSV</option>
+                        </select>
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" id="invertColors">
+                        <label class="form-check-label" for="invertColors">Invert Colors</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="juliaCX">Julia C.x:</label>
+                    <input type="number" step="0.01" class="form-control" id="juliaCX" value="-0.7">
+                </div>
+                <div class="form-group">
+                    <label for="juliaCY">Julia C.y:</label>
+                    <input type="number" step="0.01" class="form-control" id="juliaCY" value="0.27015">
+                </div>
+                <div class="button-group mt-3">
+                        <button class="btn btn-primary btn-block" id="startAnimation">Start Animation</button>
+                        <button class="btn btn-secondary btn-block" id="stopAnimation">Stop Animation</button>
+                        <button class="btn btn-danger btn-block" id="reset">Reset</button>
+                        <button class="btn btn-info btn-block" id="toggleJuliaButton">Toggle Julia Mode</button>
+                        <button class="btn btn-warning btn-block" id="fullScreenButton">Toggle Full-Screen</button>
+                        <button class="btn btn-dark btn-block" id="darkModeButton">Toggle Dark/Light Mode</button>
+                    </div>
+                    <div id="workerError" class="alert alert-danger mt-2 d-none" role="alert">
+                        Failed to load the Mandelbrot worker.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>

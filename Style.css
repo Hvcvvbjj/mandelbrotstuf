@@ -1,0 +1,83 @@
+body {
+    background-color: #282c34;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#mandelbrotCanvas {
+    border: 1px solid #000;
+    background-color: #000;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.controls {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.controls h3 {
+    color: #61dafb;
+}
+
+.form-group label {
+    color: #ddd;
+}
+
+.custom-range {
+    background-color: #444;
+}
+
+.button-group .btn {
+    margin-top: 10px;
+}
+
+/* Theme classes for dark/light mode */
+.dark-theme {
+    background-color: #282c34;
+    color: white;
+}
+
+.dark-theme .controls {
+    background-color: #333;
+}
+
+.dark-theme .controls h3 {
+    color: #61dafb;
+}
+
+.dark-theme .form-group label {
+    color: #ddd;
+}
+
+.dark-theme .custom-range {
+    background-color: #444;
+}
+
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-theme .controls {
+    background-color: #f8f9fa;
+}
+
+.light-theme .controls h3 {
+    color: #000000;
+}
+
+.light-theme .form-group label {
+    color: #000000;
+}
+
+.light-theme .custom-range {
+    background-color: #cccccc;
+}
