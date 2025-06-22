@@ -38,7 +38,7 @@ let startOffsetY = 0;
 // Initialize Web Worker only once with error handling
 let worker;
 try {
-    worker = new Worker("mandelbrotWorker.js");
+    worker = new Worker("MandelbrotWorker.js");
 } catch (err) {
     console.error("Web Worker initialization failed:", err);
     const errorDiv = document.getElementById("workerError");

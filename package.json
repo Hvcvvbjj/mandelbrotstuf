@@ -4,8 +4,9 @@
   "description": "",
   "main": "MandelbrotWorker.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"**/*.{js,css,html}\""
+    "test": "node MandelbrotWorker.test.js",
+    "format": "prettier --write \"**/*.{js,css,html}\"",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
